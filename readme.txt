@@ -30,7 +30,7 @@ docker run -i -t liquidmind/openjdk-7-jdk_git_screen_ia1
 In shell you will see text at the beginning of the line like this "root@61f1a8208f81:/#" where 61f1a8208f81 is the container id that we will need in next step.
 
 Enter the same docker container from another instance of boot2docker if you are using Windows (or from another shell session if you use Linux) by running command:
-docker exec -i -t liquidmind/openjdk-7-jdk_git_screen_ia1
+docker exec -i -t 61f1a8208f81 bash
 
 Now you can run Server in one instance and Client in another. You can create as many instances as you want, enter the same container in each of them and run different applications.
 
