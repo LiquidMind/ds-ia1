@@ -52,6 +52,11 @@ public class Server extends Thread {
     System.out.println("Server IPv6: " + Inet6Address.getLocalHost().getHostAddress());
     System.out.println("Use one of these IP addresses to run client using \"Client <SERVER_IP> [<SERVER_PORT>]\" command");
     
+    if (args.length > 0) {
+      System.out.println("Provided server port is: " + args[0]);
+      serverPort = Integer.parseInt(args[0]);
+    }
+    
     try {
       serverSocket = new ServerSocket(serverPort);
       System.out.println("Socket is opened. Server is listening on port " + serverPort);
